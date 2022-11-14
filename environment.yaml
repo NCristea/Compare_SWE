@@ -14,5 +14,10 @@ dependencies:
   - numpy
   - pytorch
   - pip
+  - netcdf4
+  - jupyter
+  - pyprojroot
+  - dask
+  - geojson
   - pip:
       - glob2
