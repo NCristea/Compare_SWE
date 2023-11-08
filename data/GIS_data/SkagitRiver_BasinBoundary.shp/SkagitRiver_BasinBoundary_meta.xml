@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <hsterms:GeographicFeatureAggregation rdf:about="http://www.hydroshare.org/resource/b4c129d29e5e4452985c9d8dc0fe01ed/data/contents/SkagitRiver_BasinBoundary_resmap.xml#aggregation">
+    <dc:type rdf:resource="https://www.hydroshare.org/terms/GeographicFeatureAggregation"/>
+    <dc:subject>skagit</dc:subject>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldName>OBJECTID</hsterms:fieldName>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hsterms:fieldWidth>
+        <hsterms:fieldType>Integer</hsterms:fieldType>
+        <hsterms:fieldTypeCode>0</hsterms:fieldTypeCode>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldPrecision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:fieldPrecision>
+        <hsterms:fieldName>Shape_Area</hsterms:fieldName>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hsterms:fieldWidth>
+        <hsterms:fieldTypeCode>2</hsterms:fieldTypeCode>
+        <hsterms:fieldType>Real</hsterms:fieldType>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <dc:title>Skagit River Watershed Boundary</dc:title>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hsterms:fieldWidth>
+        <hsterms:fieldTypeCode>0</hsterms:fieldTypeCode>
+        <hsterms:fieldType>Integer</hsterms:fieldType>
+        <hsterms:fieldName>GRID_CODE</hsterms:fieldName>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <dc:language>eng</dc:language>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldTypeCode>0</hsterms:fieldTypeCode>
+        <hsterms:fieldName>SKAGIT_</hsterms:fieldName>
+        <hsterms:fieldType>Integer</hsterms:fieldType>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hsterms:fieldWidth>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <hsterms:GeometryInformation>
+      <rdf:Description>
+        <hsterms:geometryType>POLYGON</hsterms:geometryType>
+        <hsterms:featureCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:featureCount>
+      </rdf:Description>
+    </hsterms:GeometryInformation>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hsterms:fieldWidth>
+        <hsterms:fieldTypeCode>0</hsterms:fieldTypeCode>
+        <hsterms:fieldName>SKAGIT_ID</hsterms:fieldName>
+        <hsterms:fieldType>Integer</hsterms:fieldType>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hsterms:fieldWidth>
+        <hsterms:fieldPrecision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:fieldPrecision>
+        <hsterms:fieldName>PERIMETER</hsterms:fieldName>
+        <hsterms:fieldTypeCode>2</hsterms:fieldTypeCode>
+        <hsterms:fieldType>Real</hsterms:fieldType>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>northlimit=49.31294305446457; projection=WGS 84 EPSG:4326; units=Decimal degrees; southlimit=47.95797439879428; eastlimit=-120.65291594978117; westlimit=-122.37789083517129</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldTypeCode>2</hsterms:fieldTypeCode>
+        <hsterms:fieldType>Real</hsterms:fieldType>
+        <hsterms:fieldName>AREA</hsterms:fieldName>
+        <hsterms:fieldPrecision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:fieldPrecision>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hsterms:fieldWidth>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <hsterms:spatialReference>
+      <hsterms:box>
+        <rdf:value>northlimit=49.3129430544646; southlimit=47.9579743987943; westlimit=-122.377890835171; eastlimit=-120.652915949781; projection_string=GEOGCS["GCS_WGS_1984",
+    DATUM["WGS_1984",
+        SPHEROID["WGS_84",6378137.0,298.257223563]],
+    PRIMEM["Greenwich",0.0],
+    UNIT["Degree",0.0174532925199433]]; projection_name=GCS_WGS_1984; datum=WGS_1984; units=Degree</rdf:value>
+      </hsterms:box>
+    </hsterms:spatialReference>
+    <hsterms:FieldInformation>
+      <rdf:Description>
+        <hsterms:fieldName>Shape_Leng</hsterms:fieldName>
+        <hsterms:fieldPrecision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:fieldPrecision>
+        <hsterms:fieldWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hsterms:fieldWidth>
+        <hsterms:fieldTypeCode>2</hsterms:fieldTypeCode>
+        <hsterms:fieldType>Real</hsterms:fieldType>
+      </rdf:Description>
+    </hsterms:FieldInformation>
+    <dc:subject>sauk</dc:subject>
+  </hsterms:GeographicFeatureAggregation>
+  <rdf:Description rdf:about="http://www.hydroshare.org/terms/GeographicFeatureAggregation">
+    <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+    <rdfs:label>Geographic Feature Content: The multiple files that are part of a geographic shapefile</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
