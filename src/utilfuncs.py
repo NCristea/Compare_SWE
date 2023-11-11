@@ -1,8 +1,9 @@
 import geojson
+import numpy as np
 
 # function to convert bounding box to geojson
 def bbox(coord_list):
-    "TO DO - integrate this function better when needed"
+    "TODO - integrate this function better when needed - not working "
     box = []
     for i in (0,1):
         res = sorted(coord_list, key=lambda x:x[i])
@@ -10,12 +11,35 @@ def bbox(coord_list):
     ret = f"({box[0][0]} {box[1][0]}, {box[0][1]} {box[1][1]})"
     return ret
 
-# obviously you need to parse your json here
-#poly=geojson.Polygon([[(2.38, 57.322), (23.194, -20.28), (-120.43, 19.15), (2.38, 57.322)]])
-#line = bbox(list(geojson.utils.coords(poly)))
-#print(line)
+def bounding_box(lower_left_longitude,
+                 lower_left_latitude,
+                 upper_right_longitude,
+                 upper_right_latitude):
+    "TODO - explain function"
+    bb_array = np.array([[lower_left_longitude, upper_right_latitude], [upper_right_longitude, upper_right_latitude], [upper_right_longitude, lower_left_latitude], [lower_left_longitude,  lower_left_latitude]])
+    return bb_array
 
+def get_selection_mask(region_mask, dataset):
+    """
+    Return the difference in days between the current date and game release date.
+    Parameter
+    ---------
+    mask : regionmask mask https://regionmask.readthedocs.io/en/stable/ in lat long
+    dataset : xarray data set in lat long
 
+    Returns
+    -------
+    out_sel : selected data using regionmask in an xarray dataset
+    """
+    mask_poly = region_mask.mask(dataset)
+    sel_mask_poly = mask_poly.where(mask_poly == 0).values
+    lat = mask_poly.lat.values
+    lon = mask_poly.lon.values
+    id_lon = lon[np.where(~np.all(np.isnan(sel_mask_poly), axis=0))]
+    id_lat = lat[np.where(~np.all(np.isnan(sel_mask_poly), axis=1))]
+    out_sel = dataset.sel(lat=slice(id_lat[0], id_lat[-1]), lon=slice(id_lon[0],
+                                                                      id_lon[-1])).compute().where(mask_poly == 0)
+    return out_sel
 
 def calc_water_year(da):
     return da.dt.year + (da.dt.month >= 10).astype(int)
